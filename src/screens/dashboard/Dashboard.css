@@ -1,0 +1,74 @@
+.filterRowContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90vw;
+    margin-top: 50px;
+    margin-left: 5vw;
+}
+
+.filterItem {
+    margin-right: 10px;
+}
+
+.loaderContainer {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.tableContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #555;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 50px;
+}
+
+.tableRowBorder {
+    border: 1px solid #555;
+    border-width: 0px;
+    border-bottom-width: 1px;
+}
+
+.tableRow {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+.tableRowRank {
+    display: flex;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+    font-size: 15px;
+}
+.tableRowName {
+    display: flex;
+    flex: 50;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+    font-size: 15px;
+}
+.tableRowDPS {
+    display: flex;
+    flex: 20;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+    font-size: 15px;
+}

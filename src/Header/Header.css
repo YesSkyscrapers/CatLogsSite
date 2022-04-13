@@ -1,0 +1,24 @@
+.headerContainer {
+    background-color:#141414;
+    display: flex;
+    flex-direction: row;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid;
+    border-color: #555;
+    border-width: 0px;
+    border-bottom-width: 1px;
+}
+
+.menuButton {
+    height: 40px;
+    width: 40px;
+}
+
+.flexDefault {
+    display: flex;
+    flex-direction: column;
+}
+
