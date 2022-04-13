@@ -4,6 +4,7 @@ import Select from 'react-select'
 import { BOSSES_OPTIONS, CLASSES_OPTIONS, DIFFICULTY_OPTIONS } from "../../constants";
 import { css } from "@emotion/react";
 import DotLoader from "react-spinners/DotLoader";
+import Pagination from "../../theme/Pagination/Pagination";
 
 
 const override = css`
@@ -15,9 +16,12 @@ const DashboardComponent = ({
     boss,
     playerClass,
     difficulty,
+    pageIndex,
+    maxPageSize,
     onBossChange,
     onClassChange,
     onDifficultyChange,
+    onPageIndexChange,
     isLoading,
     table
 }) => {
@@ -49,9 +53,12 @@ const DashboardComponent = ({
                                 })
                             }
                         </div>
-                        <div>
-                            {//pagination
-                            }
+                        <div className="paginationContainer">
+                            <Pagination
+                                pageIndex={pageIndex}
+                                maxPageSize={maxPageSize}
+                                onPageChange={onPageIndexChange}
+                            />
                         </div>
                     </div>
                 )

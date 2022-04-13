@@ -10,19 +10,19 @@ const FirelandsBosses = [
         key: "bethtilac",
         name: "Бет'тилак",
         image: BethtilacImage,
-        link: "?boss=bethtilac"
+        link: "/dashboard?boss=bethtilac"
     },
     {
         key: "rhyolith",
         name: "Риолит",
         image: RhyolithImage,
-        link: "?boss=rhyolith"
+        link: "/dashboard?boss=rhyolith"
     },
     {
         key: "shannox",
         name: "Шэннокс",
         image: ShannoxImage,
-        link: "?boss=shannox"
+        link: "/dashboard?boss=shannox"
     }
 ]
 
