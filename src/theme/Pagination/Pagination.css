@@ -1,0 +1,32 @@
+.paginationRect {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #555;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: white;
+    display: flex;
+}
+
+.hiddenRect {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 0px solid #555;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: transparent;
+    display: flex;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

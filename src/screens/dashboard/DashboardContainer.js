@@ -25,10 +25,13 @@ const DashboardContainer = ({
     const queryBoss = searchParams.get("boss")
     const queryClass = searchParams.get("class") || "any"
     const queryDifficulty = searchParams.get("difficulty") || "any"
+    const queryPageIndex = searchParams.get("pageIndex") || "0"
 
     let [boss, setBoss] = useState(queryBoss)
     let [playerClass, setClass] = useState(queryClass)
     let [difficulty, setDifficulty] = useState(queryDifficulty)
+    let [pageIndex, setPageIndex] = useState(queryPageIndex)
+    let [maxPageSize, setMaxPageSize] = useState(0)
 
     let [isLoading, setLoading] = useState(true)
     let [table, setTable] = useState([])
@@ -37,26 +40,32 @@ const DashboardContainer = ({
         setBoss(queryBoss)
         setClass(queryClass)
         setDifficulty(queryDifficulty)
-        history.push(`/dashboard?boss=${queryBoss}&class=${queryClass}&difficulty=${queryDifficulty}`)
+        setPageIndex(queryPageIndex)
+        history.push(`/dashboard?boss=${queryBoss}&class=${queryClass}&difficulty=${queryDifficulty}&pageIndex=${queryPageIndex}`)
         startLoad()
-    }, [queryBoss, queryClass, queryDifficulty])
+    }, [queryBoss, queryClass, queryDifficulty, queryPageIndex])
 
     const history = useHistory()
     const dispatch = useDispatch()
 
     const onBossChange = value => {
         setBoss(value.value)
-        history.push(`/dashboard?boss=${value.value}&class=${queryClass}&difficulty=${queryDifficulty}`)
+        history.push(`/dashboard?boss=${value.value}&class=${queryClass}&difficulty=${queryDifficulty}&pageIndex=${queryPageIndex}`)
     }
 
     const onClassChange = value => {
         setClass(value.value)
-        history.push(`/dashboard?boss=${queryBoss}&class=${value.value}&difficulty=${queryDifficulty}`)
+        history.push(`/dashboard?boss=${queryBoss}&class=${value.value}&difficulty=${queryDifficulty}&pageIndex=${queryPageIndex}`)
     }
 
     const onDifficultyChange = value => {
         setDifficulty(value.value)
-        history.push(`/dashboard?boss=${queryBoss}&class=${queryClass}&difficulty=${value.value}`)
+        history.push(`/dashboard?boss=${queryBoss}&class=${queryClass}&difficulty=${value.value}&pageIndex=${queryPageIndex}`)
+    }
+
+    const onPageIndexChange = value => {
+        setPageIndex(value)
+        history.push(`/dashboard?boss=${queryBoss}&class=${queryClass}&difficulty=${value.value}&pageIndex=${value}`)
     }
 
     const startLoad = async () => {
@@ -69,6 +78,7 @@ const DashboardContainer = ({
                 }, 5000)
             })
             setTable(TESTDATA)
+            setMaxPageSize(10)
         } catch (err) {
 
         } finally {
@@ -81,9 +91,12 @@ const DashboardContainer = ({
             boss={boss}
             playerClass={playerClass}
             difficulty={difficulty}
+            pageIndex={pageIndex}
+            maxPageSize={maxPageSize}
             onBossChange={onBossChange}
             onClassChange={onClassChange}
             onDifficultyChange={onDifficultyChange}
+            onPageIndexChange={onPageIndexChange}
             isLoading={isLoading}
             table={table}
         />
