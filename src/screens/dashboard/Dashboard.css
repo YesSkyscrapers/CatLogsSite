@@ -58,8 +58,8 @@
     align-items: center;
     padding-left: 30px;
     padding-right: 30px;
-    text-align: left;
     font-size: 15px;
+    text-align: left;
 }
 .tableRowDPS {
     display: flex;
