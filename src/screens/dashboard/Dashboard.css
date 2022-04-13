@@ -72,3 +72,9 @@
     text-align: left;
     font-size: 15px;
 }
+
+.paginationContainer {
+    margin-top: 50px;
+    align-self: center;
+    
+}
