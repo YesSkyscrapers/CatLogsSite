@@ -4,42 +4,34 @@ import FLImage from '../images/firelands.png'
 import BethtilacImage from '../images/bethtilacImage.png'
 import RhyolithImage from '../images/rhyolithImage.png'
 import ShannoxImage from '../images/shannoxImage.png'
-import { useHistory } from "react-router-dom";
-import { toggleSideBar } from "../store/app";
-import { useDispatch } from "react-redux";
 
 const FirelandsBosses = [
     {
         key: "bethtilac",
         name: "Бет'тилак",
         image: BethtilacImage,
-        link: "/dashboard/bethtilac"
+        link: "?boss=bethtilac"
     },
     {
         key: "rhyolith",
         name: "Риолит",
         image: RhyolithImage,
-        link: "/dashboard/rhyolith"
+        link: "?boss=rhyolith"
     },
     {
         key: "shannox",
         name: "Шэннокс",
         image: ShannoxImage,
-        link: "/dashboard/shannox"
+        link: "?boss=shannox"
     }
 ]
 
 const SideBarComponent = ({
     wrapperRef,
+    onPress
 }) => {
 
-    const history = useHistory()
-    const dispatch = useDispatch()
 
-    const onPress = (boss) => {
-        history.push(boss.link)
-        dispatch(toggleSideBar(false))
-    }
 
     return (
         <div ref={wrapperRef} className="sidebar is-nav-closed">
