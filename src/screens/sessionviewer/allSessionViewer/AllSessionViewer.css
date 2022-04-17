@@ -1,0 +1,56 @@
+.AllSessionsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.SessionRow {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 40px;
+    border: 1px solid #555;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.SessionRowImage{
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.SessionRowName {
+    color: white;
+    font-size: 17px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.SessionRowAddInfo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 16px;
+    align-items: center;
+}
+
+.SessionRowTime {
+    color: white;
+    font-size: 11px;
+    margin-left: 10px;
+}
+
+.SessionRowKill {
+    color: #a6e68c;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.SessionRowWipe {
+    color: #e68066;
+    font-size: 13px;
+    margin-left: 10px;
+}
