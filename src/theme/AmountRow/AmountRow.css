@@ -1,0 +1,40 @@
+.AmountRowContainer {
+    display: flex;
+    padding-left: 8px;
+    padding-right: 8px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+}
+
+.AmountRowProcent {
+    display: flex;
+    width: 50px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.AmountRowRowProcentContainer {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.AmountRowRowProcent {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 10px;
+}
+
+.AmountRowOverall {
+    display: flex;
+    width: 50px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 8px;
+}

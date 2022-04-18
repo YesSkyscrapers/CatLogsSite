@@ -1,14 +1,10 @@
-.FilterRowContainer {
+.filterRowContainer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
     width: 90vw;
-    height: 30px;
-    margin-top: 25px;
+    margin-top: 50px;
     margin-left: 5vw;
-    border: 1px solid #555;
-    background-color: #121212;
 }
 
 .filterItem {
@@ -81,40 +77,4 @@
     margin-top: 50px;
     align-self: center;
     
-}
-
-
-.AboutRaidContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    background-color: #001520;
-    padding-left: 5vw;
-    padding-right:5vw;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    height: 58px;
-    margin-top: 50px;
-    border: 1px solid #555;
-}
-
-.AboutRaidImage{
-    width:50px;
-    height:50px;
-    margin-right: 16px;
-    align-self: center;
-}
-
-.AboutRaidTitle {
-    color: white;
-    font-size: 25px;
-    text-align: left;
-    align-self: center;
-}
-
-.CombatLogTableContainer {
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 25px;
 }
