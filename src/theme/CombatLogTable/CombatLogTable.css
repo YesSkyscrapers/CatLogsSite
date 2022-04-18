@@ -1,0 +1,138 @@
+.CombatLogTable {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex:1;
+}
+
+.CombatLogTableHeaderRow {
+    display: flex;
+    flex-direction: row;
+    height: 27px;
+    background-color: #222222;
+}
+
+.CombatLogTableHeaderColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #555;
+    color: white;
+    font-size: 13px;
+}
+
+.CombatLogTableHeaderName {
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.CombatLogTableHeaderRank{
+    flex-direction: column;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.CombatLogTableHeaderDPS{
+    flex-direction: column;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+.CombatLogTableRow {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+}
+
+.CombatLogTableColumn {
+    display: flex;
+    align-items: center;
+    border: 1px solid #555;
+    color: white;
+    font-size: 12px;
+    border-top-width: 0px;
+}
+
+.CombatLogTableName {
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.CombatLogTableRank{
+    flex-direction: column;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.CombatLogTableDPS{
+    flex-direction: column;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.CombatLogTableNameContainer {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.CombatLogTableRankContainer {
+    padding-left: 8px;
+    padding-right: 8px;   
+}
+
+.CombatLogTableDPSContainer {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #d1fa99;
+}
+
+.CombatLogTableRowDiffColor {
+    background-color: #101010;
+}
+
+
+.CombatLogTableOverlayContainer {
+    position: absolute;
+    width: 82vw;
+    margin-left: 1px;
+    margin-top: 30px;
+    background-color: #101010;
+    border: 1px solid #555;
+}
+
+
+.CombatLogTableOverlayLoader{
+    height: 30vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+

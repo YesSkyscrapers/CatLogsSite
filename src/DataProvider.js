@@ -70,6 +70,16 @@ class DataProvider {
             toTargetId
         })
     }
+
+    getCombatLogs = async (boss, difficulty, playerClass, pageSize, pageIndex) => {
+        return await basicFetch("combatLog.read", {
+            pageIndex,
+            pageSize,
+            boss,
+            difficulty,
+            playerClass
+        })
+    }
 }
 
 export default new DataProvider()

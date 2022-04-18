@@ -3,6 +3,7 @@ import { DotLoader } from "react-spinners"
 import AmountRow from "../../AmountRow/AmountRow"
 import "./DamageDoneDescriptionTable.css"
 import { css } from "@emotion/react";
+import { SPELLSCHOOLS, SPELLSCHOOL_UNKNOWN } from "../../../constants";
 
 const override = css`
   display: block;
@@ -50,13 +51,16 @@ const DamageDoneDescriptionTable = ({
                                 return (
                                     <div key={"gi" + greatItem.id} className={index % 2 == 0 ? "SpellTableRow SpellTableRowDiffColor" : "SpellTableRow"}>
                                         <div className="SpellTableColumn SpellTableName">
-                                            <div className="SpellTableNameContainer">{greatItem.spellName.split('"').join("")}</div>
+                                            <div className="SpellTableNameContainer"
+                                                style={{ color: SPELLSCHOOLS[greatItem.school] || SPELLSCHOOLS[SPELLSCHOOL_UNKNOWN] }}
+                                            >{greatItem.spellName.split('"').join("")}</div>
                                         </div>
                                         <div className="SpellTableColumn SpellTableAmount">
                                             <AmountRow
                                                 rowProcent={`${Math.floor(greatItem.amount * 10000 / allOverall) / 100}`}
                                                 procent={greatItem.amount / maxOverall}
                                                 overall={greatItem.amount}
+                                                color={SPELLSCHOOLS[greatItem.school] || SPELLSCHOOLS[SPELLSCHOOL_UNKNOWN]}
                                             />
                                         </div>
                                     </div>

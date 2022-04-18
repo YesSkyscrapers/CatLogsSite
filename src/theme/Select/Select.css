@@ -1,0 +1,56 @@
+.SelectTitle {
+    font-size: 13px;
+    color:white;
+    flex-direction: row;
+    display: flex;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.SelectContainer {
+    display: flex;
+    margin-right: 8px;
+}
+
+.SelectTitleArrow {
+    align-self: flex-end;
+    margin-left: 8px;
+}
+
+.DownArrow {
+    width: 10px;
+    height: 10px;
+}   
+
+.OverlayDropdown {
+    display: flex;
+    position: absolute;
+    background-color: black;
+    border: 1px solid #555;
+    margin-top: 25px;
+}
+
+.OverlayDropdownContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;   
+}
+
+.OverlayDropdownLabel {
+    font-size: 13px;
+    color: white;
+    text-align: left;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.OverlayCheats {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: transparent;
+}

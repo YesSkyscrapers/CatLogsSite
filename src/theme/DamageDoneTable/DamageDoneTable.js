@@ -5,6 +5,7 @@ import AmountRow from "../AmountRow/AmountRow"
 import "./DamageDoneTable.css"
 import { css } from "@emotion/react";
 import DamageDoneDescriptionTable from "./DamageDoneDescriptionTable/DamageDoneDescriptionTable"
+import { CLASSES } from "../../constants"
 
 const override = css`
   display: block;
@@ -59,13 +60,14 @@ const DamageDoneTable = ({
                     return (
                         <div onMouseEnter={() => onMouseEnter(item)} onMouseLeave={() => onMouseLeave(item)} key={item.id} className={index % 2 == 0 ? "TableRow TableRowDiffColor" : "TableRow"}>
                             <div className="TableColumn TableName">
-                                <div className="TableNameContainer">{item.playerName.split('"').join("")}</div>
+                                <div className="TableNameContainer" style={{ color: CLASSES.find(playerClass => playerClass.key == item.playerClass)?.color || "white" }}>{item.playerName.split('"').join("")}</div>
                             </div>
                             <div className="TableColumn TableAmount">
                                 <AmountRow
                                     rowProcent={`${Math.floor(item.overall * 10000 / allOverall) / 100}`}
                                     procent={item.overall / maxOverall}
                                     overall={item.overall}
+                                    color={CLASSES.find(playerClass => playerClass.key == item.playerClass)?.color || "white"}
                                 />
                             </div>
                             <div className="TableColumn TableDPS">

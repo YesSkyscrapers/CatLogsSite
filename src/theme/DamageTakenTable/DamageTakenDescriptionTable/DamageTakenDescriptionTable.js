@@ -3,6 +3,7 @@ import { DotLoader } from "react-spinners"
 import AmountRow from "../../AmountRow/AmountRow"
 import "./DamageTakenDescriptionTable.css"
 import { css } from "@emotion/react";
+import { CLASSES } from "../../../constants";
 
 const override = css`
   display: block;
@@ -50,13 +51,14 @@ const DamageTakenDescriptionTable = ({
                                 return (
                                     <div key={"gi" + greatItem.id} className={index % 2 == 0 ? "TargetTableRow TargetTableRowDiffColor" : "TargetTableRow"}>
                                         <div className="TargetTableColumn TargetTableName">
-                                            <div className="TargetTableNameContainer">{greatItem.byPlayerName.split('"').join("")}</div>
+                                            <div className="TargetTableNameContainer" style={{ color: CLASSES.find(playerClass => playerClass.key == greatItem.playerClass)?.color || "white" }}>{greatItem.byPlayerName.split('"').join("")}</div>
                                         </div>
                                         <div className="TargetTableColumn TargetTableAmount">
                                             <AmountRow
                                                 rowProcent={`${Math.floor(greatItem.amount * 10000 / allOverall) / 100}`}
                                                 procent={greatItem.amount / maxOverall}
                                                 overall={greatItem.amount}
+                                                color={CLASSES.find(playerClass => playerClass.key == greatItem.playerClass)?.color || "white"}
                                             />
                                         </div>
                                     </div>
