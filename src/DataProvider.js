@@ -7,14 +7,8 @@ const basicFetch = (action, data) => {
             action,
             data
         })
-    }).then(response => response.json())
-        .then(response => {
-            return (new Promise(res => {
-                setTimeout(() => {
-                    res(response)
-                }, 2000)
-            }))
-        })
+    })
+        .then(response => response.json())
         .catch(console.log)
 }
 
