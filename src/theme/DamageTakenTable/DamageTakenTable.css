@@ -1,0 +1,111 @@
+.Table {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex:1;
+}
+
+.TableHeaderRow {
+    display: flex;
+    flex-direction: row;
+    height: 27px;
+    background-color: #222222;
+}
+
+.TableHeaderColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #555;
+    color: white;
+    font-size: 13px;
+}
+
+.TableHeaderName {
+    width: 22vw;
+    overflow: hidden;
+}
+
+.TableHeaderAmount{
+    width: 51vw;
+    overflow: hidden;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.TableHeaderDPS{
+    width: 9vw;
+    overflow: hidden;
+}
+
+
+
+.TableRow {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+}
+
+.TableColumn {
+    display: flex;
+    align-items: center;
+    border: 1px solid #555;
+    color: white;
+    font-size: 12px;
+    border-top-width: 0px;
+}
+
+.TableName {
+    width: 22vw;
+    overflow: hidden;
+}
+
+.TableAmount{
+    width: 51vw;
+    overflow: hidden;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.TableDPS{
+    width: 9vw;
+    overflow: hidden;
+    justify-content: flex-end;
+}
+
+.TableNameContainer {
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: left;
+}
+
+.TableDPSContainer {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #d1fa99;
+}
+
+.TableRowDiffColor {
+    background-color: #101010;
+}
+
+
+.TableOverlayContainer {
+    position: absolute;
+    width: 82vw;
+    margin-left: 1px;
+    margin-top: 30px;
+    background-color: #101010;
+    border: 1px solid #555;
+}
+
+
+.TableOverlayLoader{
+    height: 30vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+

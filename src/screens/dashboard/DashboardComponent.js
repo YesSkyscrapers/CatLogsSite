@@ -1,12 +1,15 @@
 import React from "react";
 import "./Dashboard.css"
-import Select from 'react-select'
-import { BOSSES_OPTIONS, CLASSES_OPTIONS, DIFFICULTY_OPTIONS } from "../../constants";
+import Select from '../../theme/Select/Select'
+import { BOSSES_OPTIONS, CLASSES, CLASSES_OPTIONS, DIFFICULTY_OPTIONS } from "../../constants";
 import { css } from "@emotion/react";
 import DotLoader from "react-spinners/DotLoader";
 import Pagination from "../../theme/Pagination/Pagination";
+import FLImage from '../../images/firelands.png'
+import CombatLogTable from "../../theme/CombatLogTable/CombatLogTable";
 
 
+const PAGE_SIZE = 10;
 const override = css`
   display: block;
     margin: 0 auto;
@@ -23,15 +26,41 @@ const DashboardComponent = ({
     onDifficultyChange,
     onPageIndexChange,
     isLoading,
-    table
+    table,
+    onLogPress
 }) => {
 
     return (
         <div>
-            <div className="filterRowContainer">
-                <Select onChange={onBossChange} className="filterItem" options={BOSSES_OPTIONS} value={BOSSES_OPTIONS.find(i => i.value == (boss ? boss : "any"))} />
-                <Select onChange={onDifficultyChange} className="filterItem" options={DIFFICULTY_OPTIONS} value={DIFFICULTY_OPTIONS.find(i => i.value == (difficulty ? difficulty : "any"))} />
-                <Select onChange={onClassChange} className="filterItem" options={CLASSES_OPTIONS} value={CLASSES_OPTIONS.find(i => i.value == (playerClass ? playerClass : "any"))} />
+            <div className="AboutRaidContainer">
+                <img src={FLImage} className="AboutRaidImage" />
+                <div className="AboutRaidTitle">Огненные просторы</div>
+            </div>
+            <div className="FilterRowContainer">
+                <Select
+                    emptyTitle="Босс"
+                    emptyOption="Любой"
+                    onChange={onBossChange}
+                    className="filterItem"
+                    options={BOSSES_OPTIONS}
+                    value={BOSSES_OPTIONS.find(i => i.value == boss)}
+                />
+                <Select
+                    emptyTitle="Сложность"
+                    emptyOption="Любая"
+                    onChange={onDifficultyChange}
+                    className="filterItem"
+                    options={DIFFICULTY_OPTIONS}
+                    value={DIFFICULTY_OPTIONS.find(i => i.value == difficulty)}
+                />
+                <Select
+                    emptyTitle="Класс"
+                    emptyOption="Любой"
+                    onChange={onClassChange}
+                    className="filterItem"
+                    options={CLASSES}
+                    value={CLASSES.find(i => i.value == playerClass)}
+                />
             </div>
             {
                 isLoading ? (
@@ -39,20 +68,13 @@ const DashboardComponent = ({
                         <DotLoader color={"white"} loading={isLoading} css={override} size={50} />
                     </div>
                 ) : (
-                    <div >
-                        <div className="tableContainer">
-                            {
-                                table.map((row, index) => {
-                                    return (
-                                        <div className={`tableRow ${index == table.length - 1 ? "" : "tableRowBorder"}`}>
-                                            <div className="tableRowRank">{index + 1}</div>
-                                            <div className="tableRowName">{row.playerName}</div>
-                                            <div className="tableRowDPS">{row.dps}</div>
-                                        </div>
-                                    )
-                                })
-                            }
-                        </div>
+                    <div className="CombatLogTableContainer">
+                        <CombatLogTable
+                            data={table}
+                            pageIndex={pageIndex}
+                            pageSize={PAGE_SIZE}
+                            onLogPress={onLogPress}
+                        />
                         <div className="paginationContainer">
                             <Pagination
                                 pageIndex={pageIndex}

@@ -11,7 +11,6 @@ const SideBarContainer = ({ }) => {
     let wrapperRef = useRef(null)
 
     useEffect(() => {
-        console.log(sideBarShow)
         const wrapper = wrapperRef.current
         wrapper.classList.add(sideBarShow ? 'is-nav-open' : "is-nav-closed")
         wrapper.classList.remove(!sideBarShow ? 'is-nav-open' : "is-nav-closed")
