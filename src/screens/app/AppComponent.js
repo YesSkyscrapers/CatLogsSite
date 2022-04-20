@@ -39,7 +39,7 @@ const AppComponent = ({
                 3) Можно идти в рейд!
             </div>
 
-            <a href=" http://localhost:2424/download" download className="DownloadButton">
+            <a href=" http://185.119.57.131:2424/download" download className="DownloadButton">
                 Скачать
             </a>
             <div className="AppText TextCenter">
