@@ -3,7 +3,8 @@ import "./Header.css"
 
 const HeaderComponent = ({
     onMenuPress,
-    isMenuActive
+    isMenuActive,
+    onTitlePress
 }) => {
     return (
         <div className="headerContainer">
@@ -12,6 +13,7 @@ const HeaderComponent = ({
                 <div style={{ width: 40, height: 4, backgroundColor: 'white', marginTop: 8 }} />
                 <div style={{ width: 40, height: 4, backgroundColor: 'white', marginTop: 8 }} />
             </div>
+            <div onClick={onTitlePress} className="HeaderTitle">CatLogs</div>
         </div>
     )
 }
