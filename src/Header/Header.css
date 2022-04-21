@@ -22,3 +22,10 @@
     flex-direction: column;
 }
 
+.HeaderTitle {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    align-self: center;
+    margin-left: 16px;
+}
