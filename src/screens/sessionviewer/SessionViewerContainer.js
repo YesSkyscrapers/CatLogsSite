@@ -14,7 +14,8 @@ const SessionViewerContainer = ({
     let { sessionhash, id } = useParams();
 
     let [sessions, setSessions] = useState([])
-    let [isLoading, setIsLoading] = useState(true)
+    let [isAllSessionsLoading, setIsAllSessionsLoading] = useState(true)
+    let [isSpecificSessionLoading, setIsSpecificSessionLoading] = useState(true)
     let [damageDone, setDamageDone] = useState([])
     let [damageDoneDescription, setDamageDoneDescription] = useState({})
     let [damageTaken, setDamageTaken] = useState([])
@@ -23,18 +24,18 @@ const SessionViewerContainer = ({
     let [_id, setId] = useState(id)
 
     useEffect(() => {
-        setIsLoading(true)
+        setIsAllSessionsLoading(true)
         DataProvider.getCombatSessions(sessionhash, 500, 0).then(loadedSessions => {
             setSessions(loadedSessions.data)
         }).finally(() => {
-            setIsLoading(false)
+            setIsAllSessionsLoading(false)
         })
     }, [sessionhash])
 
     useEffect(() => {
         setId(id)
         if (id) {
-            setIsLoading(true)
+            setIsSpecificSessionLoading(true)
             Promise.all([
                 DataProvider.getDamageDone(id, 500, 0),
                 DataProvider.getDamageTaken(id, 500, 0),
@@ -44,7 +45,7 @@ const SessionViewerContainer = ({
                 setDamageTaken(values[1].data.sort((x, y) => y.overall - x.overall))
                 setSession(values[2].data[0])
             }).finally(() => {
-                setIsLoading(false)
+                setIsSpecificSessionLoading(false)
             })
         }
     }, [id])
@@ -81,7 +82,7 @@ const SessionViewerContainer = ({
         <SessionViewerComponent
             sessionhash={sessionhash}
             id={_id}
-            isLoading={isLoading}
+            isLoading={isAllSessionsLoading || isSpecificSessionLoading}
             sessions={sessions}
             damageDone={damageDone}
             damageTaken={damageTaken}
