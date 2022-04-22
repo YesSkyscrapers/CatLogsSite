@@ -47,6 +47,8 @@ const SessionViewerContainer = ({
             }).finally(() => {
                 setIsSpecificSessionLoading(false)
             })
+        } else {
+            setIsSpecificSessionLoading(false)
         }
     }, [id])
 
