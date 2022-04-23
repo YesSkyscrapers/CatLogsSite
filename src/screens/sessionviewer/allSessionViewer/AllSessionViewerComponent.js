@@ -45,6 +45,13 @@ const AllSessionViewerComponent = ({
     return (
         <div className="AllSessionsContainer">
             {
+                sessions.length == 0 && (
+                    <div className="EmptySession">
+                        Логи по пулам отсутствуют
+                    </div>
+                )
+            }
+            {
                 sessions.map(session => {
                     return (
                         <div onClick={() => onSelect(session.id)} key={session.id} className="SessionRow">
