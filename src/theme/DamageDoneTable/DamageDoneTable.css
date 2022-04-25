@@ -23,19 +23,20 @@
 }
 
 .TableHeaderName {
-    width: 18vw;
+    flex: 18;
     overflow: hidden;
 }
 
 .TableHeaderAmount{
-    width: 55vw;
+    flex: 55;
     overflow: hidden;
     border-left-width: 0px;
     border-right-width: 0px;
 }
 
 .TableHeaderDPS{
-    width: 9vw;
+    flex: 9;
+    min-width: 70px;
     overflow: hidden;
 }
 
@@ -57,19 +58,20 @@
 }
 
 .TableName {
-    width: 18vw;
+    flex: 18;
     overflow: hidden;
 }
 
 .TableAmount{
-    width: 55vw;
+    flex: 55;
     overflow: hidden;
     border-left-width: 0px;
     border-right-width: 0px;
 }
 
 .TableDPS{
-    width: 9vw;
+    flex: 9;
+    min-width: 70px;
     overflow: hidden;
     justify-content: flex-end;
 }
