@@ -6,6 +6,7 @@ import { css } from "@emotion/react";
 import BethtilacImage from '../../../images/bethtilacImage.png'
 import RhyolithImage from '../../../images/rhyolithImage.png'
 import ShannoxImage from '../../../images/shannoxImage.png'
+import AlysrazorImage from '../../../images/alysrazorImage.png'
 import moment from 'moment';
 import DamageDoneTable from "../../../theme/DamageDoneTable/DamageDoneTable";
 import DamageTakenTable from "../../../theme/DamageTakenTable/DamageTakenTable";
@@ -22,6 +23,10 @@ const BOSS_INFO = {
     "SHANNOX": {
         image: ShannoxImage,
         name: "Шэннокс"
+    },
+    "ALYSRAZOR": {
+        image: AlysrazorImage,
+        name: "Алисразор"
     }
 }
 
