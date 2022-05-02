@@ -7,7 +7,8 @@ export const BOSSES = {
 export const BOSSES_OPTIONS = [
     { value: "rhyolith", label: "Риолит" },
     { value: "bethtilac", label: "Бет'тилак" },
-    { value: "shannox", label: "Шэннокс" }
+    { value: "shannox", label: "Шэннокс" },
+    { value: "alysrazor", label: "Алисразор" }
 ]
 
 

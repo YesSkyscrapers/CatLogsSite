@@ -4,6 +4,7 @@ import FLImage from '../images/firelands.png'
 import BethtilacImage from '../images/bethtilacImage.png'
 import RhyolithImage from '../images/rhyolithImage.png'
 import ShannoxImage from '../images/shannoxImage.png'
+import AlyzrazorImage from '../images/alysrazorImage.png'
 
 const FirelandsBosses = [
     {
@@ -23,6 +24,12 @@ const FirelandsBosses = [
         name: "Шэннокс",
         image: ShannoxImage,
         link: "/dashboard?boss=shannox"
+    },
+    {
+        key: "alysrazor",
+        name: "Алисразор",
+        image: AlyzrazorImage,
+        link: "/dashboard?boss=alysrazor"
     }
 ]
 
