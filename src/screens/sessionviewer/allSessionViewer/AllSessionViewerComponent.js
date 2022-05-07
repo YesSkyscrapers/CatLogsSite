@@ -7,6 +7,9 @@ import BethtilacImage from '../../../images/bethtilacImage.png'
 import RhyolithImage from '../../../images/rhyolithImage.png'
 import ShannoxImage from '../../../images/shannoxImage.png'
 import AlysrazorImage from '../../../images/alysrazorImage.png'
+import BalerocImage from '../../../images/balerocImage.png'
+import MajordomoImage from '../../../images/majordomoImage.png'
+import RagnarosImage from '../../../images/ragnarosImage.png'
 import moment from 'moment';
 
 const BOSS_INFO = {
@@ -25,6 +28,18 @@ const BOSS_INFO = {
     "ALYSRAZOR": {
         image: AlysrazorImage,
         name: "Алисразор"
+    },
+    "BALEROC": {
+        image: BalerocImage,
+        name: "Бейлрок, привратник"
+    },
+    "MAJORDOMO": {
+        image: MajordomoImage,
+        name: "Мажордом Фэндрал Олений Шлем"
+    },
+    "RAGNAROS": {
+        image: RagnarosImage,
+        name: "Рагнарос"
     }
 }
 
