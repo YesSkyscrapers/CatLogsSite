@@ -8,7 +8,10 @@ export const BOSSES_OPTIONS = [
     { value: "rhyolith", label: "Риолит" },
     { value: "bethtilac", label: "Бет'тилак" },
     { value: "shannox", label: "Шэннокс" },
-    { value: "alysrazor", label: "Алисразор" }
+    { value: "alysrazor", label: "Алисразор" },
+    { value: "baleroc", label: "Бейлрок, привратник" },
+    { value: "majordomo", label: "Мажордом Фэндрал Олений Шлем" },
+    { value: "ragnaros", label: "Рагнарос" }
 ]
 
 

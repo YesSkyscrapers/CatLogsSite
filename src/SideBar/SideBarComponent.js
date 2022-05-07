@@ -5,6 +5,9 @@ import BethtilacImage from '../images/bethtilacImage.png'
 import RhyolithImage from '../images/rhyolithImage.png'
 import ShannoxImage from '../images/shannoxImage.png'
 import AlyzrazorImage from '../images/alysrazorImage.png'
+import BalerocImage from '../images/balerocImage.png'
+import MajordomoImage from '../images/majordomoImage.png'
+import RagnarosImage from '../images/ragnarosImage.png'
 
 const FirelandsBosses = [
     {
@@ -30,6 +33,24 @@ const FirelandsBosses = [
         name: "Алисразор",
         image: AlyzrazorImage,
         link: "/dashboard?boss=alysrazor"
+    },
+    {
+        key: "baleroc",
+        name: "Бейлрок, привратник",
+        image: BalerocImage,
+        link: "/dashboard?boss=baleroc"
+    },
+    {
+        key: "majordomo",
+        name: "Мажордом Фэндрал Олений Шлем",
+        image: MajordomoImage,
+        link: "/dashboard?boss=majordomo"
+    },
+    {
+        key: "ragnaros",
+        name: "Рагнарос",
+        image: RagnarosImage,
+        link: "/dashboard?boss=ragnaros"
     }
 ]
 
