@@ -1,17 +1,43 @@
+import MorchokImage from './images/morchokImage.jpg'
+import YorsahjImage from './images/yorsahjImage.jpg'
+import ZonozzImage from './images/zonozzImage.jpg'
+import HagaraImage from './images/hagaraImage.jpg'
+import UltraxionImage from './images/ultraxionImage.jpg'
+import WarmasterImage from './images/warmasterImage.jpg'
+import SpineImage from './images/spineImage.jpg'
+import MadnessImage from './images/madnessImage.jpg'
+
 export const BOSSES = {
-    "rhyolith": "rhyolith",
-    "bethtilac": "bethtilac",
-    "shannox": "shannox"
+    "morchok": "morchok",
+    "yorsahj": "yorsahj",
+    "zonozz": "zonozz",
+    "hagara": "hagara",
+    "ultraxion": "ultraxion",
+    "warmaster": "warmaster",
+    "spine": "spine",
+    "madness": "madness"
+}
+
+export const BOSSES_IMAGES = {
+    "morchok": MorchokImage,
+    "yorsahj": YorsahjImage,
+    "zonozz": ZonozzImage,
+    "hagara": HagaraImage,
+    "ultraxion": UltraxionImage,
+    "warmaster": WarmasterImage,
+    "spine": SpineImage,
+    "madness": MadnessImage
 }
 
 export const BOSSES_OPTIONS = [
-    { value: "rhyolith", label: "Риолит" },
-    { value: "bethtilac", label: "Бет'тилак" },
-    { value: "shannox", label: "Шэннокс" },
-    { value: "alysrazor", label: "Алисразор" },
-    { value: "baleroc", label: "Бейлрок, привратник" },
-    { value: "majordomo", label: "Мажордом Фэндрал Олений Шлем" },
-    { value: "ragnaros", label: "Рагнарос" }
+    { value: "morchok", label: "Морхок" },
+    { value: "yorsahj", label: "Йорсадж" },
+    { value: "zonozz", label: "Зоноз" },
+    { value: "hagara", label: "Хагара" },
+    { value: "ultraxion", label: "Ультраксион" },
+    { value: "warmaster", label: "Воевода" },
+    { value: "spine", label: "Спина" },
+    { value: "madness", label: "Мэднесс" }
 ]
 
 
@@ -23,12 +49,7 @@ export const DIFFICULTY_OPTIONS = [
 ]
 
 
-export const CLASSES_OPTIONS = [
-    { value: "druidCat", label: "Кот" },
-    { value: "druidBear", label: "Мишка" },
-    { value: "druidBalance", label: "Сова" },
-    { value: "druidRestoration", label: "Рдру" }
-]
+
 
 
 export const CLASSES = [{
