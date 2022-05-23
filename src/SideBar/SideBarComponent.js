@@ -1,56 +1,56 @@
 import React from "react";
 import "./SideBar.css"
-import FLImage from '../images/firelands.png'
-import BethtilacImage from '../images/bethtilacImage.png'
-import RhyolithImage from '../images/rhyolithImage.png'
-import ShannoxImage from '../images/shannoxImage.png'
-import AlyzrazorImage from '../images/alysrazorImage.png'
-import BalerocImage from '../images/balerocImage.png'
-import MajordomoImage from '../images/majordomoImage.png'
-import RagnarosImage from '../images/ragnarosImage.png'
+import DSImage from '../images/dragonsoul.jpg'
+import { BOSSES_IMAGES } from "../constants";
 
-const FirelandsBosses = [
+const dragonSoulBosses = [
     {
-        key: "bethtilac",
-        name: "Бет'тилак",
-        image: BethtilacImage,
-        link: "/dashboard?boss=bethtilac"
+        key: "morchok",
+        name: "Морхок",
+        image: BOSSES_IMAGES.morchok,
+        link: "/dashboard?boss=morchok"
     },
     {
-        key: "rhyolith",
-        name: "Риолит",
-        image: RhyolithImage,
-        link: "/dashboard?boss=rhyolith"
+        key: "yorsahj",
+        name: "Йорсадж",
+        image: BOSSES_IMAGES.yorsahj,
+        link: "/dashboard?boss=yorsahj"
     },
     {
-        key: "shannox",
-        name: "Шэннокс",
-        image: ShannoxImage,
-        link: "/dashboard?boss=shannox"
+        key: "zonozz",
+        name: "Зонозз",
+        image: BOSSES_IMAGES.zonozz,
+        link: "/dashboard?boss=zonozz"
     },
     {
-        key: "alysrazor",
-        name: "Алисразор",
-        image: AlyzrazorImage,
-        link: "/dashboard?boss=alysrazor"
+        key: "hagara",
+        name: "Хагара",
+        image: BOSSES_IMAGES.hagara,
+        link: "/dashboard?boss=hagara"
     },
     {
-        key: "baleroc",
-        name: "Бейлрок, привратник",
-        image: BalerocImage,
-        link: "/dashboard?boss=baleroc"
+        key: "ultraxion",
+        name: "Ультраксион",
+        image: BOSSES_IMAGES.ultraxion,
+        link: "/dashboard?boss=ultraxion"
     },
     {
-        key: "majordomo",
-        name: "Мажордом Фэндрал Олений Шлем",
-        image: MajordomoImage,
-        link: "/dashboard?boss=majordomo"
+        key: "warmaster",
+        name: "Воевода",
+        image: BOSSES_IMAGES.warmaster,
+        link: "/dashboard?boss=warmaster"
     },
     {
-        key: "ragnaros",
-        name: "Рагнарос",
-        image: RagnarosImage,
-        link: "/dashboard?boss=ragnaros"
+        key: "spine",
+        name: "Спина",
+        image: BOSSES_IMAGES.spine,
+        link: "/dashboard?boss=spine"
+    },
+    {
+        key: "madness",
+        name: "Мэднесс",
+        image: BOSSES_IMAGES.madness,
+        link: "/dashboard?boss=madness"
     }
 ]
 
@@ -64,14 +64,14 @@ const SideBarComponent = ({
     return (
         <div ref={wrapperRef} className="sidebar is-nav-closed">
             <div className="SidebarRow">
-                <img src={FLImage} className="SidebarImage" />
+                <img src={DSImage} className="SidebarImage" />
                 <div className="SidebarRowTitle">
-                    Огненные просторы
+                    Душа дракона
                 </div>
             </div>
             <div>
                 {
-                    FirelandsBosses.map(boss => {
+                    dragonSoulBosses.map(boss => {
                         return (
                             <div onClick={() => onPress(boss)} key={boss.key} className="SidebarBossRow">
                                 <img src={boss.image} className="SidebarBossImage" />

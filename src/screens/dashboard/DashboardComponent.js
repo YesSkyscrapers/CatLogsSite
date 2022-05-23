@@ -5,7 +5,7 @@ import { BOSSES_OPTIONS, CLASSES, CLASSES_OPTIONS, DIFFICULTY_OPTIONS } from "..
 import { css } from "@emotion/react";
 import DotLoader from "react-spinners/DotLoader";
 import Pagination from "../../theme/Pagination/Pagination";
-import FLImage from '../../images/firelands.png'
+import DSImage from '../../images/dragonsoul.jpg'
 import CombatLogTable from "../../theme/CombatLogTable/CombatLogTable";
 
 
@@ -33,8 +33,8 @@ const DashboardComponent = ({
     return (
         <div>
             <div className="AboutRaidContainer">
-                <img src={FLImage} className="AboutRaidImage" />
-                <div className="AboutRaidTitle">Огненные просторы</div>
+                <img src={DSImage} className="AboutRaidImage" />
+                <div className="AboutRaidTitle">Душа дракона</div>
             </div>
             <div className="FilterRowContainer">
                 <Select
