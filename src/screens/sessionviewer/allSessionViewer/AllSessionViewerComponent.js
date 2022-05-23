@@ -3,43 +3,41 @@ import "./AllSessionViewer.css"
 import DotLoader from "react-spinners/DotLoader";
 import Pagination from "../../../theme/Pagination/Pagination";
 import { css } from "@emotion/react";
-import BethtilacImage from '../../../images/bethtilacImage.png'
-import RhyolithImage from '../../../images/rhyolithImage.png'
-import ShannoxImage from '../../../images/shannoxImage.png'
-import AlysrazorImage from '../../../images/alysrazorImage.png'
-import BalerocImage from '../../../images/balerocImage.png'
-import MajordomoImage from '../../../images/majordomoImage.png'
-import RagnarosImage from '../../../images/ragnarosImage.png'
 import moment from 'moment';
+import { BOSSES, BOSSES_IMAGES } from "../../../constants";
 
 const BOSS_INFO = {
-    "RHYOLITH": {
-        image: RhyolithImage,
-        name: "Риолит"
+    "MORCHOK": {
+        image: BOSSES_IMAGES[BOSSES.morchok],
+        name: "Морхок"
     },
-    "BETHTILAC": {
-        image: BethtilacImage,
-        name: "Бет'тилак"
+    "YORSAHJ": {
+        image: BOSSES_IMAGES[BOSSES.yorsahj],
+        name: "Йорсадж"
     },
-    "SHANNOX": {
-        image: ShannoxImage,
-        name: "Шэннокс"
+    "ZONOZZ": {
+        image: BOSSES_IMAGES[BOSSES.zonozz],
+        name: "Зонозз"
     },
-    "ALYSRAZOR": {
-        image: AlysrazorImage,
-        name: "Алисразор"
+    "HAGARA": {
+        image: BOSSES_IMAGES[BOSSES.hagara],
+        name: "Хагара"
     },
-    "BALEROC": {
-        image: BalerocImage,
-        name: "Бейлрок, привратник"
+    "ULTRAXION": {
+        image: BOSSES_IMAGES[BOSSES.ultraxion],
+        name: "Ультраксион"
     },
-    "MAJORDOMO": {
-        image: MajordomoImage,
-        name: "Мажордом Фэндрал Олений Шлем"
+    "WARMASTER": {
+        image: BOSSES_IMAGES[BOSSES.warmaster],
+        name: "Воевода"
     },
-    "RAGNAROS": {
-        image: RagnarosImage,
-        name: "Рагнарос"
+    "SPINE": {
+        image: BOSSES_IMAGES[BOSSES.spine],
+        name: "Спина"
+    },
+    "MADNESS": {
+        image: BOSSES_IMAGES[BOSSES.madness],
+        name: "Мэднесс"
     }
 }
 
