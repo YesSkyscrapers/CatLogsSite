@@ -32,7 +32,7 @@ export const BOSSES_IMAGES = {
 export const BOSSES_OPTIONS = [
     { value: "morchok", label: "Морхок" },
     { value: "yorsahj", label: "Йорсадж" },
-    { value: "zonozz", label: "Зоноз" },
+    { value: "zonozz", label: "Зонозз" },
     { value: "hagara", label: "Хагара" },
     { value: "ultraxion", label: "Ультраксион" },
     { value: "warmaster", label: "Воевода" },
